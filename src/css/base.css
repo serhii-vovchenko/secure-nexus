@@ -1,0 +1,92 @@
+@font-face {
+	font-display: swap;
+	font-family: 'Mashetic';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Mashetic.otf');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/Poppins-SemiBold.ttf');
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	color: #fff;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	background-color: #001531;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #fff;
+	font-family: 'Mashetic';
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.container {
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 360px) {
+	.container {
+		/* max-width: 360px; */
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		/* max-width: 768px;
+		padding: 0 32px; */
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.container {
+		/* max-width: 1280px;
+		padding: 0 91px; */
+	}
+}
