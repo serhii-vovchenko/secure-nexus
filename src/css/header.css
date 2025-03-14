@@ -1,0 +1,158 @@
+header {
+	padding: 60px 0 10px;
+}
+
+.header_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 34px;
+}
+
+.nav_wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header_logo {
+	color: #df3d0f;
+	font-size: 26px;
+}
+
+.nav_block {
+}
+
+.nav_list {
+	display: flex;
+	gap: 34px;
+}
+
+.nav_item {
+}
+
+.nav_link {
+	padding: 5px 0;
+	transition: color ease 0.3s;
+	&:hover {
+		color: #df3d0f;
+	}
+}
+
+.button_box {
+	flex-shrink: 0;
+}
+
+.header_burger_btn {
+	display: none;
+}
+
+.burger_svg {
+	width: 53px;
+	height: 35px;
+	fill: #fff;
+}
+
+.header_btn {
+	padding: 8px 15px;
+	background: linear-gradient(90deg, #3b34a1 0%, #e1400f 100%);
+	/* background-color: #e1400f; */
+
+	transition: background-color ease 0.5s;
+
+	&:hover {
+		background-color: #3b34a1;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.header_logo {
+		font-size: 20px;
+	}
+
+	.header_container {
+		gap: 24px;
+	}
+
+	.nav_list {
+		gap: 24px;
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.header_container {
+		flex-direction: column;
+		justify-content: center;
+		gap: 27px;
+	}
+
+	.nav_wrapper {
+		justify-content: center;
+	}
+
+	.nav_block {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 160px;
+		padding-left: 60px;
+		transform: translateX(-100%);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+	}
+
+	.nav_block_active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transform: translateX(0);
+	}
+
+	.nav_list {
+		flex-direction: column;
+	}
+
+	.button_box {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header_burger_btn {
+		display: flex;
+	}
+
+	.active_burger_btn {
+		z-index: 1;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav_block {
+		padding-left: 32px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	header {
+		padding: 77px 10px;
+	}
+
+	.nav_block {
+		padding-left: 15px;
+	}
+
+	.header_logo {
+		font-size: 18px;
+	}
+	.header_btn {
+		font-size: 12px;
+	}
+}
